@@ -15,7 +15,7 @@ my $contents;
     local $/ = undef;
     $contents = <DATA>;
 }
-my @contents = split "\n", $contents;
+my @contents = split $/, $contents;
 
 my $filename = 'test.text';
 my $fh = IO::File->new( $filename, O_WRONLY | O_CREAT );
@@ -43,4 +43,5 @@ END {
 __DATA__
 This is a temporary file which is generated as part of the testing 
 procedure for the Slurp perl module and should be deleted following
-the completion of the test slurp.t.
+the completion of the test slurp.t.  If this file persists following 
+the completion of testing, it can be safely deleted.

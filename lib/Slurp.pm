@@ -8,7 +8,7 @@ use vars qw/ @EXPORT @EXPORT_OK @ISA $VERSION /;
 @EXPORT_OK = qw/ to_array to_scalar /;
 
 
-$VERSION = '0.2';
+$VERSION = '0.21';
 
 
 sub slurp { 
@@ -43,21 +43,23 @@ Slurp - Slurp entire files into variables
 
  use Slurp;
 
- my $file = slurp($filename);
+ my $file = slurp($file1, $file2, ...);
 
  my @array = Slurp->to_array($filename);
  my $scalar = Slurp->to_scalar($filename);
 
 =head1 DESCRIPTION
 
-This simple module provides one purpose - to provide a simple means 
-to read (or slurp) an entire file into memory for processing.  This 
-module allows the replacement of the prototypical while-loops used 
-for opening and reading of files with single-line constructs.
+This simple module serves one purpose - to provide a simple means to 
+read (or slurp) an entire file into memory for processing.  This 
+module allows the replacement of the prototypical foreach- or while-
+loops used for opening and reading of files with single-line 
+constructs.
 
-Of note with this module is that the magic of the @ARGV variable and 
-the input record separator, $/, are used to facilitate the reading of 
-entire files into either an array or scalar using minimal code.
+Of note with this module is that the magic of the C<@ARGV> variable 
+and the input record separator, C<$/>, are used to facilitate the 
+reading of entire files into either an array or scalar using minimal 
+code.
 
 =head1 METHODS
 
@@ -103,7 +105,7 @@ passed to this method as arguments, into a scalar variable.
 
 =head1 VERSION
 
-0.2
+0.3
 
 =head1 AUTHOR
 

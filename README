@@ -4,16 +4,16 @@ NAME
 SYNOPSIS
      use Slurp;
 
-     my $file = slurp($filename);
+     my $file = slurp($file1, $file2, ...);
 
      my @array = Slurp->to_array($filename);
      my $scalar = Slurp->to_scalar($filename);
 
 DESCRIPTION
-    This simple module provides one purpose - to provide a simple means to
+    This simple module serves one purpose - to provide a simple means to
     read (or slurp) an entire file into memory for processing. This module
-    allows the replacement of the prototypical while-loops used for opening
-    and reading of files with single-line constructs.
+    allows the replacement of the prototypical foreach- or while- loops used
+    for opening and reading of files with single-line constructs.
 
     Of note with this module is that the magic of the @ARGV variable and the
     input record separator, $/, are used to facilitate the reading of entire
@@ -53,7 +53,7 @@ METHODS
         passed to this method as arguments, into a scalar variable.
 
 VERSION
-    0.2
+    0.3
 
 AUTHOR
     Rob Casey
