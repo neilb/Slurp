@@ -12,3 +12,8 @@ Revision history for Perl extension Slurp
 0.3   Tue Dec 31 01:22:00 2002
         - Minor update to module documentation; rob@cowsnet.com.au
         - Minor update to module tests; rob@cowsnet.com.au
+
+0.4   Mon Jan 06 09:22:00 2003
+        - Removal of pseudo- object-orientated interface to module; rob@cowsnet.com.au
+        - Minor update to module documentation; rob@cowsnet.com.au
+        - Minor update to module tests; rob@cowsnet.com.au

@@ -5,14 +5,13 @@ use vars qw/ @EXPORT @EXPORT_OK @ISA $VERSION /;
 
 @ISA = qw/ Exporter /;
 @EXPORT = qw/ slurp /;
-@EXPORT_OK = qw/ to_array to_scalar /;
+@EXPORT_OK = qw/ slurp to_array to_scalar /;
 
 
-$VERSION = '0.21';
+$VERSION = '0.4';
 
 
 sub slurp { 
-    shift @_ if defined( $_[0] ) and ( ( !ref( $_[0] ) ) and ( $_[0] eq __PACKAGE__ ) );
     local( $/, @ARGV ) = ( wantarray ? $/ : undef, @_ ); 
     return <ARGV>;
 }
@@ -45,8 +44,8 @@ Slurp - Slurp entire files into variables
 
  my $file = slurp($file1, $file2, ...);
 
- my @array = Slurp->to_array($filename);
- my $scalar = Slurp->to_scalar($filename);
+ my @array = Slurp::to_array($filename);
+ my $scalar = Slurp::to_scalar($filename);
 
 =head1 DESCRIPTION
 
@@ -84,28 +83,29 @@ which this method was called.
 =item B<to_array>
 
  my @array = Slurp::to_array($filename, ...);
- my $array_ref = Slurp->to_array($filename, ...);
+ my $array_ref = Slurp::to_array($filename, ...);
 
-This method, which can be called in either a functional or object- 
-orientated style, slurps one or more files, specified by filenames 
-passed to this method as arguments, into memory.  If called in a 
-scalar context, this method returns an array reference - This is 
+This method slurps one or more files, specified by filenames passed 
+to this method as arguments, into memory.  If called in a scalar 
+context, this method returns an array reference - This is 
 particularly useful if dealing with large files.
 
 =item B<to_scalar>
 
  my $scalar = Slurp::to_scalar($filename, ...);
- my $scalar = Slurp->to_scalar($filename, ...);
 
-This method, which can be called in either a functional or object- 
-orientated style, slurps one or more files, specified by filenames 
-passed to this method as arguments, into a scalar variable.
+This method slurps one or more files, specified by filenames passed 
+to this method as arguments, into a scalar variable.
 
 =back
 
+=head1 SEE ALSO
+
+L<File::Slurp>
+
 =head1 VERSION
 
-0.3
+0.4
 
 =head1 AUTHOR
 

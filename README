@@ -6,8 +6,8 @@ SYNOPSIS
 
      my $file = slurp($file1, $file2, ...);
 
-     my @array = Slurp->to_array($filename);
-     my $scalar = Slurp->to_scalar($filename);
+     my @array = Slurp::to_array($filename);
+     my $scalar = Slurp::to_scalar($filename);
 
 DESCRIPTION
     This simple module serves one purpose - to provide a simple means to
@@ -36,24 +36,24 @@ METHODS
 
     to_array
          my @array = Slurp::to_array($filename, ...);
-         my $array_ref = Slurp->to_array($filename, ...);
+         my $array_ref = Slurp::to_array($filename, ...);
 
-        This method, which can be called in either a functional or object-
-        orientated style, slurps one or more files, specified by filenames
-        passed to this method as arguments, into memory. If called in a
-        scalar context, this method returns an array reference - This is
+        This method slurps one or more files, specified by filenames passed
+        to this method as arguments, into memory. If called in a scalar
+        context, this method returns an array reference - This is
         particularly useful if dealing with large files.
 
     to_scalar
          my $scalar = Slurp::to_scalar($filename, ...);
-         my $scalar = Slurp->to_scalar($filename, ...);
 
-        This method, which can be called in either a functional or object-
-        orientated style, slurps one or more files, specified by filenames
-        passed to this method as arguments, into a scalar variable.
+        This method slurps one or more files, specified by filenames passed
+        to this method as arguments, into a scalar variable.
+
+SEE ALSO
+    File::Slurp
 
 VERSION
-    0.3
+    0.4
 
 AUTHOR
     Rob Casey

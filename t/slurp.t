@@ -1,6 +1,6 @@
 use Fcntl;
 use IO::File;
-use Test::More 'tests' => 5;
+use Test::More 'tests' => 6;
 
 
 BEGIN {
@@ -27,7 +27,10 @@ if ( defined $fh ) {
 -e $filename ? ok( 1 ) : fail();
 
 my @array = Slurp::to_array( $filename );
-is( @array, @contents, 'Slurp::to_array' );
+is( @array, @contents, 'Slurp::to_array (array)' );
+
+my $array = Slurp::to_array( $filename );
+ok( ref $array eq 'ARRAY', 'Slurp::to_array (arrayref)' );
 
 is( Slurp::to_scalar( $filename ), $contents, 'Slurp::to_scalar' );
 
