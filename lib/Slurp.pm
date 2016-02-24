@@ -1,14 +1,13 @@
 package Slurp;
 
+use 5.006;
+use strict;
+use warnings;
 use Exporter;
-use vars qw/ @EXPORT @EXPORT_OK @ISA $VERSION /;
 
-@ISA = qw/ Exporter /;
-@EXPORT = qw/ slurp /;
-@EXPORT_OK = qw/ slurp to_array to_scalar /;
-
-
-$VERSION = '0.4';
+our @ISA       = qw/ Exporter /;
+our @EXPORT    = qw/ slurp /;
+our @EXPORT_OK = qw/ slurp to_array to_scalar /;
 
 
 sub slurp { 
@@ -103,13 +102,16 @@ to this method as arguments, into a scalar variable.
 
 L<File::Slurp>
 
-=head1 VERSION
-
-0.4
-
 =head1 AUTHOR
 
 Rob Casey
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2004 by Rob Casey.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 
