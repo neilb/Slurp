@@ -48,6 +48,9 @@ Slurp - Slurp entire files into variables
 
 =head1 DESCRIPTION
 
+Before using this module you should first look at L<File::Slurper>,
+which is a modern implementation of this idea.
+
 This simple module serves one purpose - to provide a simple means to 
 read (or slurp) an entire file into memory for processing.  This 
 module allows the replacement of the prototypical foreach- or while-
@@ -100,7 +103,11 @@ to this method as arguments, into a scalar variable.
 
 =head1 SEE ALSO
 
-L<File::Slurp>
+L<File::Slurper> - modern implementation of slurping functions
+and the inverse function for writing a scalar to a file.
+
+L<File::Slurp> - widely used, but has a number of known issues.
+
 
 =head1 AUTHOR
 

@@ -4,6 +4,7 @@ Revision history for Perl extension Slurp
     - Switched to Dist::Zilla, to ensure dist has META.* files,
       and also follows other CPAN conventions.
     - Added strict and warnings, and dropped use of "use vars".
+    - Updated doc to direct people to File::Slurper
 
 0.4 2003-01-12 ROBAU
     - Removal of pseudo- object-orientated interface to module;
